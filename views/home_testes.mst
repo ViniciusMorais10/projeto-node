@@ -1,0 +1,18 @@
+<h1>Seja bem Vindo </h1>
+<h2>Qualquer mensagem </h2>
+
+{{!comentários: O simbolo # Serve para condições}}
+{{#mostrar}}
+<p>Nome: {{nome}} </p>
+<p>Idade: {{idade}} </p>
+{{/mostrar}}
+
+<ul>
+    {{#ingredientes}}
+    <li>{{nome}} -  {{qt}}</li>
+    {{/ingredientes}}
+</ul>
+{{!O simbolo ^ , Serve para realizar tratativas para quando o obj estiver vazio, exibir uma mensagem}}
+{{^ingredientes}}
+    "Não há ingredientes na lista"
+{{/ingredientes}}

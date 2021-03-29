@@ -1,5 +1,3 @@
-const app = require('./app');
-
 const mongoose = require('mongoose');
 
 require('dotenv').config({path:'variables.env'});
@@ -11,6 +9,11 @@ mongoose.connection.on('error',(error)=>{
     console.error("ERRO +"+error.message);
 });
 
+//Carregando todos os models
+
+require('./models/Post');
+
+const app = require('./app');
 app.set('port', process.env.PORT || 3333);
 
 const server = app.listen(app.get('port'), ()=>{

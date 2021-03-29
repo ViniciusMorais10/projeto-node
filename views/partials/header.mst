@@ -1,0 +1,25 @@
+<html>
+<head>
+        <title>{{pageTitle}} {{help.defaultPageTitle}}</title>
+</head>
+<body>
+<h1>Cabeçalho</h1>
+<hr/>
+    <ul>
+    {{#help.menu}}
+        <li><a href="{{slug}}">{{name}}</a></li>
+    {{/help.menu}}    
+    </ul>
+<hr/>
+
+{{#flashes}}
+    {{#sucess}}
+        <div>{{.}}</div>
+    {{/sucess}}
+    {{#error}}
+        <div>{{.}}</div>
+    {{/error}}
+    {{#info}}
+        <div>{{.}}</div>
+    {{/info}}
+{{/flashes}}
