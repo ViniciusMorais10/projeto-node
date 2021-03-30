@@ -1,25 +1,28 @@
 <html>
 <head>
         <title>{{pageTitle}} {{help.defaultPageTitle}}</title>
+        <link rel="stylesheet" href="/assets/css/template.css" />
 </head>
 <body>
-<h1>Cabeçalho</h1>
+<header>
+<h1>Linkedin de Posts</h1>
 <hr/>
     <ul>
     {{#help.menu}}
         <li><a href="{{slug}}">{{name}}</a></li>
     {{/help.menu}}    
     </ul>
-<hr/>
+</header>
+
 
 {{#flashes}}
     {{#sucess}}
-        <div>{{.}}</div>
+        <div class="warning">{{.}}</div>
     {{/sucess}}
     {{#error}}
-        <div>{{.}}</div>
+        <div class="warning" >{{.}}</div>
     {{/error}}
     {{#info}}
-        <div>{{.}}</div>
+        <div class="warning">{{.}}</div>
     {{/info}}
 {{/flashes}}
