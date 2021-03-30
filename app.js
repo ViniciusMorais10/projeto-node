@@ -34,7 +34,6 @@ app.use((req,res, next)=>{
 
 //Importar CSS antes das rotas
 
-
 app.use('/',router);
 
 app.use(errorHandler.notfound);
